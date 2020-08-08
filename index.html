@@ -24,8 +24,8 @@
         <div class="col">
           <h1>{{ product }}</h1> <!--CONTENIDO ETIQUETAS-->
           <h2>{{ description }}</h2>
-          <p v-if='stock > 10'>En Stock</p>
-          <p v-else-if='stock < 10 && stock > 0'>Quedan muy pocas</p>
+          <p v-if='stock > 6'>En Stock</p>
+          <p v-else-if='stock <= 6 && stock > 0'>Quedan muy pocas</p>
           <p v-else=>Agotadas</p>
           <ul>
             <li v-for='(detail, index) in details':key="index">{{detail}}</li>
