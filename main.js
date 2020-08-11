@@ -13,7 +13,7 @@ var app = new Vue({
             id: 5,
             type: 'Roja',
             img: './assets/1.jpg',
-            stock: 10,
+            stock: 15,
             default: true
         },
         {
