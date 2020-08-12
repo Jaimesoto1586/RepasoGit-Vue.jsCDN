@@ -31,10 +31,14 @@
           <ul>
             <li v-for='(detail, index) in details':key="index">{{detail}}</li>
           </ul>
-          <div v-for="variant in variants" :key="variant.id">
+          <hr>
+          <h4>Variedades</h4>
+          <div class="pl-3" v-for="variant in variants" :key="variant.id">
             <p v-on:mouseover="updateProduct(variant)">{{variant.type}}</p>
           </div>
           <a :href="link">Ver detalles</a>
+          <p>Costo de envío: {{shipping}}</p>
+          <!-- AQUI QUEDE HAY QUE VER EL PROPS  -->
           <!-- BOTONES -->
           <p>{{cart}}</p>
           <button class="btn btn-sm btn-info" @click="addToCart" :disabled="!inStock">Agregar al Carro</button>

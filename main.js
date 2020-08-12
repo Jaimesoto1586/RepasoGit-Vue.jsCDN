@@ -51,7 +51,10 @@ var app = new Vue({
         },
         stock(){
             return this.selectedVariant.stock
-        }
+        },
+        shipping() {
+            return this.premium == true ? 'Gratis' : "2000";
+        }        
     },
     created() {
         this.selectedVariant = this.variants.find(item => item.default == true)        
